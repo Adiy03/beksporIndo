@@ -118,7 +118,7 @@ const sr = ScrollReveal({
     // reset: true
 })
 
-sr.reveal('.home__title, .home__data, .popular__container, .subscribe__container, .footer__container, .indo'),
+sr.reveal('.home__title, .home__data, .popular__container, .subscribe__container, .footer__container, .indo, .asd'),
 sr.reveal('.home__description, .footer__info', {delay: 500})
 sr.reveal('.home__search', {delay: 600})
 sr.reveal('.home__value', {delay: 700})

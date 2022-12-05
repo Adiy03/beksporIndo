@@ -72,6 +72,7 @@ body {
   color: var(--text-color);
   transition: .3s;
   /* For animation dark mode */
+  text-transform: capitalize;
 }
 
 h1,
@@ -83,6 +84,10 @@ h3 {
 
 ul {
   list-style: none;
+}
+
+li{
+  text-transform: capitalize;
 }
 
 a {
@@ -165,9 +170,9 @@ body.dark-theme {
   display: grid;
 }
 
-.section {
+/* .section {
   padding: 4.5rem 0 2rem;
-}
+} */
 
 .section__title {
   font-size: var(--h2-font-size);
@@ -232,6 +237,7 @@ body.dark-theme {
     display: none;
   }
   .nav__menu {
+    display: none;
     position: fixed;
     bottom: 2rem;
     background-color: var(--container-color);
@@ -293,6 +299,9 @@ body.dark-theme {
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
 }
 
+.home__description li i {
+ margin-right: 1rem;
+}
 
 /*=============== HOME ===============*/
 .home{
@@ -300,17 +309,18 @@ body.dark-theme {
 }
 
 .home__container{
-  padding: 7rem 0 2.5rem;
+  padding: 3rem 0 2.5rem;
   /* background: linear-gradient(
     160deg,
     hsla(206, 5%, 24%, 1) -4%,
     hsla(206, 12%, 12%, 1) 46%); */
     background-color: #fff;
     color: #333;
+    order: 1;
 }
 
 .home__content{
-  position: relative;
+  position: relative; 
 }
 
 .home__title,
@@ -417,6 +427,8 @@ body.dark-theme {
 
 .popular__data {
   padding: 0 1rem 0 .5rem;
+ text-align: center;
+ text-transform: uppercase;
 }
 
 .popular__price {
@@ -510,6 +522,7 @@ body.dark-theme {
 
 .value__accordion-title {
   font-size: var(--small-font-size);
+  text-transform: capitalize;
 }
 
 .value__accordion-arrow {
@@ -653,14 +666,15 @@ body.dark-theme {
 }
 
 .subscribe__container {
-  /* background-color: var(--first-color); */
   padding: 3rem 2rem;
   border-radius: 1.25rem;
-  border: 2px solid var(--first-color-light);
+  /* border: 1px solid var(--first-color-light); */
   text-align: center;
-  background: url(../img/rempah.jpg);
-  object-fit: cover;
+  background: url(../img/spices3.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
+
 
 .subscribe__title {
   font-size: var(--h2-font-size);
@@ -675,7 +689,7 @@ body.dark-theme {
 }
 
 .subscribe__button {
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   background: hsl(228, 57%, 28%);;
   font-size: var(--small-font-size);
 }
@@ -687,6 +701,8 @@ body.dark-theme {
 /*=============== FOOTER ===============*/
 .footer__container {
   row-gap: 2.5rem;
+  margin-top: 2rem;
+  justify-content: center;
 }
 
 .footer__logo {
@@ -778,23 +794,6 @@ body.dark-theme {
   column-gap: 1.25rem;
 }
 
-/*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar {
-  width: .6rem;
-  border-radius: .6rem;
-  border-radius: .5rem;
-  background-color: hsl(228, 8%, 76%);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: hsl(228, 8%, 64%);
-  border-radius: .5rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(228, 8%, 54%);
-}
-
 /*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
@@ -818,19 +817,24 @@ body.dark-theme {
 
 /* Show Scroll Up*/
 .show-scroll {
-  bottom: 8rem;
+  bottom: 2rem;
 }
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 350px) {
+
+  .home__list{
+    display: none;
+  }
+
   .container {
     margin-left: 1rem;
     margin-right: 1rem;
   }
 
   .section {
-    padding: 3.5rem 0 1rem;
+    padding: 1rem 0 1rem;
   }
 
   .section .logos {
@@ -848,9 +852,9 @@ body.dark-theme {
 }
 
 @media screen and (max-width: 320px) {
-  .nav__menu {
+  /* .nav__menu {
     padding: 1.3rem 1.5rem;
-  }
+  } */
 
   .home__value {
     column-gap: 1rem;
@@ -896,10 +900,14 @@ body.dark-theme {
 /* For medium devices */
 @media screen and (min-width: 576px) {
   
-  .nav__menu {
+  /* .nav__menu {
     width: 342px;
+  } */
+  
+  .section {
+    padding: 1rem 0 1rem;
   }
-
+  
   .home__search {
     width: 412px;
   }
@@ -965,6 +973,10 @@ body.dark-theme {
 
 /* For large devices */
 @media screen and (min-width: 1023px) {
+  .subscribe__container2 {
+    min-height: 240px;
+  }
+
   .home__content{
     position: initial;
     padding: 2rem;
@@ -1127,7 +1139,7 @@ body.dark-theme {
   .subscribe__container {
     padding: 4rem 10rem 4.5rem;
     border-radius: 2rem;
-    border: 12px solid var(--first-color);
+    /* border: 2px solid var(--first-color); */
   }
 
   .subscribe__title {
@@ -1187,4 +1199,17 @@ body.dark-theme {
   body {
     zoom: 2;
   }
+}
+
+.priok{
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: max-content;
+}
+
+.asd{
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 3rem;
 }
