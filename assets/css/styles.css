@@ -409,7 +409,7 @@ body.dark-theme {
 }
 
 .popular__card {
-  width: 290px;
+  width: 275px;
   background-color: var(--container-color);
   padding: .5rem .5rem 1.5rem;
   border-radius: 1rem;
@@ -426,7 +426,7 @@ body.dark-theme {
 }
 
 .popular__data {
-  padding: 0 1rem 0 .5rem;
+  /* padding: 0 1rem 0 .5rem; */
  text-align: center;
  text-transform: uppercase;
 }
