@@ -927,6 +927,7 @@ body.dark-theme {
     grid-template-columns: repeat(2, 1fr);
     align-items: stretch;
     position: relative;
+    /* justify-content: center; */
   }
   .home__img{
     display: flex;
